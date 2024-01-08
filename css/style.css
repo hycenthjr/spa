@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* css for intersection observer */
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+
+.fade-up{
+    opacity: 0;
+    transform: translate3d(0, 5rem, 0);
+    transition: transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87), opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+}
+.fade-up.faded{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+/* css for intersection observer ends here */
+
+header{
+    height: 100dvh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 1% 10%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+}
+nav img{
+    width: 100px;    
+    position: absolute;
+    top: 20%;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid orange;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+.menu {
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    background-color: #fff;
+    text-align: left;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.menu li{
+    justify-content: center;
+    white-space: nowrap;
+} 
+.nav-links ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:orange;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+nav .fa-chevron-down {
+    margin-left: 5px;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.text-box h1{
+    font-size: 72px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 25px;
+    color: white;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 2px 4px 8px rgba(0, 0, 10, 0.5);
+    padding: 8px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #EB6440;
+    font-weight: 600;
+}
+.hero-btn i{
+    margin-left: 20px;
+}
+nav .fa-times,
+nav .fa-bars {
+    display: none;
+}
+
+/* main section */
+
+/*=============== Appointment ==================*/
+.appointment{
+    margin: 5% 10% 0%;
+}
+.app-row{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.appoint-img{
+    flex: 1;
+    width: 290px;
+}
+.appoint-text{
+    margin-left: 4%;
+    flex: 1;
+}
+.appoint-text h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+.appoint-text p{
+    padding: 10px 0px;
+    line-height: 20px;
+}
+.app-link{
+    flex: 1;
+    margin: 4% 0% 0% 10%;
+}
+.appoint-link{
+    width: fit-content;
+    text-decoration: none;
+    color: #FAAB78;
+    border: 2px solid #FAAB78;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 50px;
+}
+.appoint-link i{
+    padding-left: 10px;
+}
+.appointment hr{
+    margin-top: 4%;
+}
+
+/*================== about us =====================*/
+.about-us{
+    margin: 5% 10% 0%;
+}
+.about-us-row{
+    display: flex;
+    gap: 20px;
+}
+.about-us-row .about-img {
+    display: flex;
+    gap: 20px;
+}
+.about-pix{
+    width: 270px;
+}
+.about-us-text{
+    width: fit-content;
+}
+.about-us-text h2{
+    font-size: 40px;
+}
+.about-us-text h2::after{
+    content: '';
+    height: 2px;
+    width: 30%;
+    background: orange;
+    display: block;
+    margin: 18px 0px;
+
+}
+.about-us-text h5{
+    padding: 10px 0px;
+    font-size: 17px;
+}
+.about-us-text p{
+    width: 100%;
+    font-size: 15px;
+}
+
+/*================== contact us =====================*/
+.contact-us{
+    background-color: #FCF9BE;
+    margin: 5% 0%;
+    padding: 0% 10%;
+}
+.contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+    padding: 5% 0%;
+    justify-content: center;
+}
+.contact-row > div {
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+.contact-us i{
+    padding-bottom: 35px;
+    font-size: 50px;
+    color: #FAAB78;
+}
+.contact-row h4{
+    padding-bottom: 8%;
+    font-size: 20px;
+    color: #444;
+}
+.contact-row p{
+    line-height: 20px;
+    color: #222;
+}
+
+
+/*===================== Services ==================*/
+.services{
+    margin: 0% 10%;
+}
+.services-text-row{
+    display: flex;
+    width: fit-content;
+    padding: 0px 5px;
+}
+.services-text-row h2{
+    font-size: 42px;
+    width: 43%;
+    white-space: nowrap;
+    color: #444;
+}
+.services-text-row p{
+    padding-left: 4%;
+    padding-top: 5px;
+}
+.services hr{
+    margin: 4% 0% 5%;
+}
+.services-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+.service-box {
+    flex: 1;
+}
+.service-box img{
+    width: 256px;
+    height: 200px;
+    object-fit: cover;
+}
+.service-box h4{
+    padding: 7% 0% 5%;
+    font-size: 20px;
+    color: #222;
+}
+.service-link{
+    text-align: center;
+    margin: 4% 0% 0%;
+    justify-content: center;
+}
+
+/*===================== Clip review ==================*/
+.clip-review{
+    margin: 3% 0% 4%;
+}
+.clip-review-box{
+    position: relative;
+}
+video{
+    max-width: 3200px;
+    height: 60vh;
+    object-fit: cover;
+    width: 100%;
+}
+.clip-review-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.clip-review-text h2{
+    font-size: 45px;
+    color: #fff;
+}
+.clip-review-text p{
+    padding: 10px 0px;
+    font-size: 20px;
+    color: #fff;
+}
+.clip-icon{
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto;
+    border: 4px solid #f44336;
+}
+.clip-review-text i{
+    font-size: 20px;
+    color: #f44336;
+    padding: 10px 0px 0px 5px;
+}
+
+/*===================== Logo ==================*/
+.logo{
+    margin: 0% 10%;
+}
+.container-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide-container{
+    width: 100%;
+    align-items: center;
+    padding: 40px 0px;
+}
+.slide-content{
+    margin: 0px 40px;
+    overflow: hidden;
+}
+.image-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-image .card-img{
+    width: 160px;
+    height: 100px;
+    border: 1px solid #333;
+    object-fit: cover;
+}
+.swipe-navBtn{
+    color: #333 !important;
+    transition: color 0.3s ease;
+}
+.swipe-navBtn:hover{
+    color: #000;
+}
+.swipe-navBtn::before,
+.swipe-navBtn::after{
+    font-size: 30px !important;
+    margin-bottom: 80% !important;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swiper-pagination-bullet{
+    background-color: lightgrey;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color: #333 !important;
+}
+
+@media screen and (max-width: 768px){
+    .slide-content{
+        margin: 0px 10px;
+    }
+    .swipe-navBtn{
+        display: none;
+    }
+}
+
+/*===================== Review ==================*/
+.index-reviews {
+    margin: 10%;
+    position: relative;
+}
+.index-reviews h2{
+    font-size: 50px;
+    color: #666;
+}
+.testimonialCon {
+    margin: 5% 0 2%;
+}
+.testSlide-content {
+    margin-bottom: 3%;
+}
+.user {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.user-img {
+    width: 100%;
+    padding-bottom: 15px;
+}
+.user-img img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid orange;
+}
+.user h3{
+    color: #666;
+}
+.user h5{
+    font-size: 17px;
+    color: #f47836;
+}
+.user-text {
+    width: 800px;
+    box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.10);
+    margin: 0% auto 1%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+.user-text i{
+    margin-bottom: 25px;
+    color: gold;
+}
+.user-text p {
+    padding: 25px;
+    color: #666;
+}
+
+
+
+/* footer section */
+footer{
+    background-image: linear-gradient(rgba(10, 17, 54, 0.7),rgba(22, 33, 83, 0.7)), url(../images/footerBanner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding-top: 2%;
+}
+.footer-col{
+    padding: 10px;
+    background-color: #fff;
+    width: fit-content;
+    margin: 5% auto 3%;
+    display: grid;
+}
+.footer-col img{
+    width: 150px;
+    border: 2px solid orange;
+}
+.social{
+    padding-bottom: 5%;
+    cursor: pointer;
+}
+.social ul li{
+    display: inline-block;
+    padding: 4px 2px;
+}
+.social ul li i{
+    width: 30px;
+    color: #fff;
+    border-radius: 100%;
+}
+.quicklink2{
+    font-size: 15px;
+    font-style: italic;
+    background: #000;
+}
+.quicklink2 p{
+    color: #fff;
+    padding: 20px 0px;
+}
+
+
+
+/* ==================== */
+/* ==================================== */
+@media screen and (max-width: 1024px) {
+
+    /*=============== Header ==================*/
+    header{
+        height: 50dvh;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: fixed;
+        background: #fff;
+        height: auto;
+        width: 100%;
+        top: 0;
+        right: -100%;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-times,
+    nav .fa-bars {
+        display: block;
+        color: #000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    nav img{
+        width: 80px;    
+    }
+    .nav-links ul li a{
+        color: #000;
+        font-size: 18px;
+    }
+    .menu{
+        width: fit-content;
+        transition: 0.5s;
+        z-index: 5;
+    }
+    .nav-links ul li a::after{
+        display: none;
+    }
+    .text-box{
+        width: 90%;
+        color: white;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    .text-box h1{
+        font-size: 60px;
+        line-height: 75px;
+    }
+    .text-box p{
+        margin: 10px 0 40px;
+        font-size: 20px;
+        font-weight: lighter;
+        line-height: 25px;
+        color: white;
+    }
+    .hero-btn{
+        display: inline-block;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 2px 4px 8px rgba(0, 0, 10, 0.5);
+        padding: 8px 34px;
+        font-size: 17px;
+        background: transparent;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50px;
+        background: #EB6440;
+        font-weight: 600;
+    }
+    .hero-btn i{
+        margin-left: 20px;
+    }
+
+    
+    /*=============== Appointment ==================*/
+    .appointment{
+        margin: 5% 10% 0%;
+    }
+    .app-row{
+        flex-direction: column;
+    }
+
+    .appoint-img{
+        width: 100%;
+    }
+    .appoint-text{
+        margin-left: 0%;
+    }
+    .appoint-text h2{
+        font-size: 25px;
+        padding-top: 20px;
+    }
+    .appoint-text p{
+        padding: 10px 0px;
+        line-height: 20px;
+    }
+    .app-link{
+        margin: 4% 0% 5% 0%;
+    }
+
+    /*================== about us =====================*/
+    .about-us-row{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-pix{
+        width: 300px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+    
+    /*================== about us =====================*/
+    .contact-row{
+        padding: 10% 0%;
+    }
+
+    /*===================== Services ==================*/
+    .services {
+        padding: 10% 0%;
+    }
+    .service-box {
+        box-shadow: 1px 1px 9px rgba(0, 0, 10, 0.1);
+        margin-bottom: 30px;
+    }
+    .service-box img{
+        width: 305px;
+    }
+
+    /*===================== Logo ==================*/
+    .logo{
+        padding: 5% 0%;
+    }
+
+    /*===================== Review ==================*/
+    .index-reviews h2{
+        font-size: 40px;
+        color: #666;
+    }
+    .testimonialCon {
+        margin-top: 5%;
+    }
+    .testSlide-content {
+        margin-bottom: 5%;
+    }
+    .user-text {
+        width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+    
+}
+
+
+
+/* ==================== */
+/* ==================================== */
+@media screen and (max-width: 600px) {
+    
+    /*=============== Header ==================*/
+    header{
+        height: 100dvh !important;
+    }
+    nav img{
+        width: 50px;    
+    }
+    .text-box{
+        color: white;
+        position: absolute;
+        top: 25%;
+        left: 5%;
+    }
+    .text-box h1{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .text-box p{
+        margin: 10px 0 40px;
+        font-size: 20px;
+        font-weight: lighter;
+        line-height: 25px;
+        color: white;
+        width: 90%;
+    }
+  
+    /*================== Appointment =====================*/
+    .appointment hr{
+        margin: 15% 0%;
+    }
+
+    /*================== about us =====================*/
+    .about-us{
+        margin: 5% 10% 20%;
+    }   
+    .about-us-row .about-img {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /*================== Contact  =====================*/
+    .contact-us{
+        padding: 10% 10%;
+    }
+    
+    /*================== Services =====================*/
+    .services{
+        margin: 10% 10% 15%;
+    }
+    .services-text-row {
+        flex-direction: column;
+    }
+    .services hr{
+        margin: 10% 0%;
+    }
+
+    /*===================== Clip ==================*/
+    .clip-review-text h2{
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    /*===================== Review ==================*/ 
+    .index-reviews h2{
+        font-size: 30px;
+        color: #666;
+    }
+    .testSlide-content {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    
+    /*===================== Footer ==================*/
+    .footer-col img{
+        width: 60px;
+    }
+}

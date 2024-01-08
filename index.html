@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa website</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- link for icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- FONT STYLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="header-col">
+                <a href="index.html">
+                    <img src="images/sample-logo.png">
+                </a>
+            </div>
+
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li class="menu-btn" onclick="dropdown()">
+                        <a href="#">SERVICES <i class="fa fa-chevron-down"></i></a>
+                            <ul class="menu">
+                                <li><a href="">Neck Massage</a></li>
+                                <li><a href="">Aromatherapy</a></li>
+                                <li><a href="">Foot Massage</a></li>
+                                <li><a href="">Facial Spa</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1 class="fade-up">Spa For Your Style Fitness</h1>
+            <p class="fade-up">Mordern spa & wellness, you can't live without it. <br>General spa is what we do.</p>
+            <a href="" class="hero-btn fade-in">See More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    
+    <!-- main content section -->
+    <main>
+        <!-- appointment -->
+        <section class="appointment fade-in">
+            <div class="app-row">
+                <div class="col-4">
+                    <img src="images/sample.jpg" class="img-responsive appoint-img" alt="">
+                </div>
+                <div class="appoint-text">
+                    <h2>Get 20% Off Your First Visit!</h2>
+                    <p>Modern spa & salon you can't live without it. General spa is what we do.</p>
+                </div>
+                <div class="app-link">
+                    <a href="" class="appoint-link">Make An Appointment <i class="fa-regular fa-calendar"></i></i>
+                    </a>
+                </div>
+
+            </div>
+            
+            <hr>
+        </section>
+
+        <!-- about us -->
+        <section class="about-us">
+            <div class="about-us-row">
+                <div class="about-img">
+                    <img src="images/sample1.jpg" class="about-pix fade-in" alt="">
+
+                    <img src="images/sample2.jpg" class="about-pix fade-in" alt="">
+                </div>
+                
+                
+                <div class="about-us-text fade-up">
+                    <h2>"Name" Spa & Wellness</h2>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero volup</h5>
+                    <p> 
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia officialllllllll necessitatibus ut, impedit eveniet autem incidu accusantium saepe corrupti necessitatibus ut, impedit eveniet autem incidunt accusantium saepe corrupti doloribus excepturi culpa id quo quisquam vero alias illo laborum earum.
+
+                        <br>
+                        <br>
+
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia officia necessitatibus ut, impedit eveniet autem incidunt accusantium saepe corrupti necessitatibus ut, impedit eveniet autem incidunt accusantium saepe corrupti doloribus laborum earum.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- contact us -->
+        <section class="contact-us">
+            <div class="contact-row">
+                <div class="fade-in">
+                    <i class="fa fa-location fade-up"></i>
+                    <h4>Location</h4>
+                    <p>Dbm plaza, amino kano cresent, wuse 2, abuja, Nigeria</p>
+                </div>
+                <div class="fade-in">
+                    <i class="fa-regular fa-clock fade-up"></i>
+                    <h4>Opening Time</h4>
+                    <p>Mon - Fri 9:00 AM - 8:00 PM</p>
+                    <p>Sat: 8:30 AM - 7:00 PM</p>
+                    <p>Sun: 10:30 AM - 6:00 PM</p>
+                    </ul>
+                </div>
+                <div class="fade-in">
+                    <i class="fa fa-volume-control-phone fade-up"></i>
+                    <h4>Phone Number</h4>
+                    <p>+234 8145434576</p>
+                    <p>+234 7067843254</p>
+                </div>
+                <div class="fade-in">
+                    <i class="fa-regular fa-envelope fade-up"></i>
+                    <h4>Email Address</h4>
+                    <p>info@spaName.com</p>
+                    <p>support@spaName.com</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- services -->
+        <section class="services">
+            <div class="services-text-row fade-up">
+                <h2>Our Services</h2>
+                <p>Lorem ipsum dolor sit ametam debitis ipsa, ducimus maxime, ipsum quod! Ipsam neque eligendi quo necessitatibus illum, consectetur adipisicing elit. Unde consequuntur rerum quib, est nemo.</p>
+            </div>
+            <hr>
+
+            <div class="services-row">
+                <div class="service-box">
+                   <img src="images/Neck massage.jpg" class="fade-up" alt="">
+                   <h4>Neck Massage</h4>
+                   <p class="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe voluptatum soluta veritatis ullam possimus nobis eos quis.</p> 
+                </div>
+                <div class="service-box">
+                   <img src="images/Aromatherapy.jpg" class="fade-up" alt="">
+                   <h4>Aromatherapy Massage</h4>
+                   <p class="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe voluptatum soluta veritatis ullam possimus nobis eos quis.</p> 
+                </div>
+                <div class="service-box">
+                   <img src="images/Foot massage.jpg" class="fade-up" alt="">
+                   <h4>Foot Massage</h4>
+                   <p class="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe voluptatum soluta veritatis ullam possimus nobis eos quis.</p> 
+                </div>
+                <div class="service-box">
+                   <img src="images/Facial spa.jpg" class="fade-up" alt="">
+                   <h4>Facial Spa</h4>
+                   <p class="fade-up">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe voluptatum soluta veritatis ullam possimus nobis eos quis.</p> 
+                </div>
+            </div>
+
+            <div class="service-link">
+                <a href="" class="hero-btn">See More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- video ads -->
+        <section class="clip-review">
+            <div class="clip-review-box">
+                
+                <video src="videos/spavideo.mp4" id="vid" controls poster="images/banner.jpg"></video>
+                
+                <div class="clip-review-text" id="video-button">
+                    <h2 class="fade-up">Beautiful Skins Starts Here.</h2>
+                    <p class="fade-up">Watch Our Video</p>
+                    
+                    <div class="clip-icon" id="vid-play" onclick="play()">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--logo ads -->
+        <section class="logo">
+            <div class="container-box fade-up">
+
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo1.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo2.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo3.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo4.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo5.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo6.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo7.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo8.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="images/logo/logo9.jpg" alt="" class="card-img">
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+    
+                    <div class="swiper-button-next swipe-navBtn"></div>
+                    <div class="swiper-button-prev swipe-navBtn"></div>
+                    <br>
+                    <br>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </div>
+            <hr>
+        </section>
+        
+        <!-- testimonials -->
+        <section id="review"> 
+            <div class="index-reviews">
+                <h5 class="fade-in">Reviews from clients</h5>
+                <h2 class="fade-in">Testimonials</h2>
+
+                <div class="swiper testimonialCon">
+                    <div class="testSlide-content">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="slide-col swiper-slide">
+                                <div class="user">
+                                    <div class="user-img fade-up">
+                                        <img src="images/client2.jpg">
+                                    </div>
+                                    <h3>Suleman Malyot</h3>
+                                    <h5>Customer</h5>
+                                </div>
+    
+                                <div class="user-text fade-up">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur fuga eum minus reiciendis sit, maiores, sapiente quo 
+                                    magni perspiciatis doloribus tempore ex?</p>
+                                 
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                </div>
+                            </div>          
+                            <div class="slide-col swiper-slide">
+                                <div class="user">
+                                    <div class="user-img fade-up">
+                                        <img src="images/client1.jpg">
+                                    </div>
+                                    <h3>Faith Malyot</h3>
+                                    <h5>Customer</h5>
+                                </div>
+    
+                                <div class="user-text fade-up">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur fuga eum minus reiciendis sit, maiores, sapiente quo 
+                                    magni perspiciatis doloribus tempore ex?</p>
+                                 
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                </div>
+                            </div>          
+                            <div class="slide-col swiper-slide">
+                                <div class="user">
+                                    <div class="user-img fade-up">
+                                        <img src="images/client2.jpg">
+                                    </div>
+                                    <h3>Suleman Ella</h3>
+                                    <h5>Customer</h5>
+                                </div>
+    
+                                <div class="user-text fade-up">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur fuga eum minus reiciendis sit, maiores, sapiente quo 
+                                    magni perspiciatis doloribus tempore ex?</p>
+                                 
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                </div>
+                            </div>          
+                            <div class="slide-col swiper-slide">
+                                <div class="user">
+                                    <div class="user-img fade-up">
+                                        <img src="images/client1.jpg">
+                                    </div>
+                                    <h3>Suleman Malyot</h3>
+                                    <h5>Customer</h5>
+                                </div>
+    
+                                <div class="user-text fade-up">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Pariatur fuga eum minus reiciendis sit, maiores, sapiente quo 
+                                    magni perspiciatis doloribus tempore ex?</p>
+                                 
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-sharp fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                </div>
+                            </div>               
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer section -->
+    <footer>
+        <div class="container">
+            <div class="footer-col fade-up">
+                <img src="images/sample-logo.png" alt="">
+            </div>
+
+            <div class="social">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>  
+            </div>
+           
+            <div class="quicklink2">
+                <p>&#169 <span id="current-year"></span> SpaName - All Rights Reserved </p>
+            </div>
+        </div>
+        
+    </footer>
+
+
+    <!-- javascript section -->
+
+    <!-- JavaScript for Dropdownmenu -->
+    <script src="js/dropdownmenu.js"></script>
+
+    <!-- JavaScript for toggle menu -->
+    <script src="js/menuToggle.js"></script>
+
+    <!-- swiper js -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- intersection observer js -->
+    <script src="js/intersectionObs.js"></script>
+    
+    <!-- video play js -->
+    <script src="js/videoplay.js"></script>
+
+    <!-- slide js -->
+    <script src="js/slide.js"></script>
+
+    <!-- slide2 js -->
+    <script src="js/slide2.js"></script>
+
+
+
+    <!-- review js -->
+    <script src="js/review.js"></script>
+    
+    <!-- current year js -->
+    <script src="js/currentYear.js"></script>
+</body>
+</html>
