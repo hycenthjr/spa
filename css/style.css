@@ -193,14 +193,21 @@ nav .fa-bars {
     display: flex;
     gap: 20px;
 }
-.about-pix{
+.about-imgBox {
     width: 270px;
+}
+.about-pix{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 .about-us-text{
     width: fit-content;
 }
 .about-us-text h2{
     font-size: 40px;
+    margin-bottom: 18px;
 }
 .about-us-text h2::after{
     content: '';
@@ -208,7 +215,6 @@ nav .fa-bars {
     width: 30%;
     background: orange;
     display: block;
-    margin: 18px 0px;
 
 }
 .about-us-text h5{
@@ -283,12 +289,17 @@ nav .fa-bars {
     justify-content: center;
 }
 .service-box {
-    flex: 1;
+    width: 256px;
+    flex-grow: 1;
+}
+.service__imgBox {
+    width: 100%;
 }
 .service-box img{
-    width: 256px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
+    display: block;
 }
 .service-box h4{
     padding: 7% 0% 5%;
@@ -629,11 +640,13 @@ footer{
         flex-direction: column;
         gap: 20px;
     }
-    .about-pix{
-        width: 300px;
-        object-fit: cover;
-        margin-bottom: 30px;
+    .about-imgBox {
+        width: 100%;
     }
+    .about-img {
+        margin-bottom: 5%;
+    }
+    
     
     /*================== about us =====================*/
     .contact-row{
@@ -645,11 +658,7 @@ footer{
         padding: 10% 0%;
     }
     .service-box {
-        box-shadow: 1px 1px 9px rgba(0, 0, 10, 0.1);
-        margin-bottom: 30px;
-    }
-    .service-box img{
-        width: 305px;
+        margin-bottom: 40px;
     }
 
     /*===================== Logo ==================*/
@@ -715,11 +724,20 @@ footer{
 
     /*================== about us =====================*/
     .about-us{
-        margin: 5% 10% 20%;
+        margin: 5% 5% 20%;
     }   
-    .about-us-row .about-img {
+    .about-us-row {
         flex-direction: column;
         gap: 10px;
+    }
+    .about-img {
+        flex-direction: column;
+        margin-bottom: 15%;
+    }
+
+    .about-imgBox {
+        width: 100%;
+        margin-bottom: 5%;
     }
     
     /*================== Contact  =====================*/
@@ -729,7 +747,7 @@ footer{
     
     /*================== Services =====================*/
     .services{
-        margin: 10% 10% 15%;
+        margin: 10% 5% 15%;
     }
     .services-text-row {
         flex-direction: column;
@@ -755,6 +773,9 @@ footer{
     }
     
     /*===================== Footer ==================*/
+    .footer-col {
+        margin-top: 15%;
+    }
     .footer-col img{
         width: 60px;
     }
